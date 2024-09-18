@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <!-- <div class="artboard artboard-horizontal phone-3">736×414</div> -->
+
+  <body>
+    <div
+      class="artboard phone-3 border-2 rounded-xl mx-auto my-6 bg-gray-200 relative"
+    >
+      <span
+        class="w-4 h-4 bg-gray-500 absolute mx-auto rounded-full text-center right-1/2 top-3.5 flex items-center justify-center"
+      >
+        <div class="bg-blue-950 w-1 h-1 rounded-full"></div>
+      </span>
+
+      <main class="h-full">
+        <!-- login section -->
+        <div class="hero bg-base-200 min-h-full rounded-xl">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Phone Number</span>
+                  </label>
+                  <input
+                    type="number"
+                    id="phone-num"
+                    placeholder="Your phone "
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    type="number"
+                    id="pin-num"
+                    placeholder="Your pin"
+                    class="input input-bordered"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot pin?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="login-btn" class="btn btn-primary" >Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
