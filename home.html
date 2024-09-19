@@ -37,12 +37,16 @@
           <div class="flex gap-3.5">
             <img class="w-10" src="./images/payoo.png" alt="logo" />
             <span>
-              <h3 class="text-2xl font-bold text-gray-50">45000</h3>
+              <h3 class="text-2xl font-bold text-gray-50">
+                <span id="main-balance">45000</span>
+              </h3>
               <p class="text-gray-400">Available Balance</p>
             </span>
           </div>
 
-          <button class="btn border flex items-center justify-between">
+          <button
+            class="btn border border-gray-500 flex items-center justify-between"
+          >
             <i class="fa-regular fa-left-from-bracket"></i>Log Out
           </button>
         </section>
@@ -64,18 +68,21 @@
           <!-- funtionality -->
           <div class="grid grid-cols-3 gap-4 my-6">
             <button
+              id="add-money-btn"
               class="p-3 shadow-sm shadow-blue-100 rounded-md text-center bg-gray-950"
             >
               <i class="fa-solid fa-rectangle-history-circle-plus"></i>
               <p>Add Money</p>
             </button>
             <button
+            id="cash-out-btn"
               class="p-3 shadow-sm shadow-blue-100 rounded-md text-center bg-gray-950"
             >
               <i class="fa-solid fa-inbox-out"></i>
               <p>Cash Out</p>
             </button>
             <button
+            id="transfer-btn"
               class="p-3 shadow-sm shadow-blue-100 rounded-md text-center bg-gray-950"
             >
               <i class="fa-solid fa-money-bill-transfer"></i>
@@ -106,7 +113,7 @@
 
         <section class="px-4">
           <!------------------------------- latest payment section -->
-          <div class="hidden">
+          <div id="latest-payment-section" class=" options">
             <div class="flex justify-between items-center mb-4">
               <h2 class="text-xl font-semibold text-gray-50">Latest Payment</h2>
               <a class="text-gray-400 font-medium" href="">View All</a>
@@ -158,18 +165,18 @@
           </div>
 
           <!-- ------------------------------Add Money section -->
-          <div class=" ">
+          <div id="add-money-section" class="hidden options">
             <h1 class="text-xl font-semibold">Add Money</h1>
 
             <form class="card-body py-2 rounded-md bg-slate-900">
               <div class="form-control py-0">
                 <label class="label">
-                  <span class="label-text">Phone Number</span>
+                  <span class="label-text">Deposite Amount</span>
                 </label>
                 <input
                   type="number"
-                  id="phone-num"
-                  placeholder="Your phone "
+                  id="addmoney-amount"
+                  placeholder="In taka "
                   class="input input-bordered"
                   required
                 />
@@ -180,14 +187,52 @@
                 </label>
                 <input
                   type="number"
-                  id="pin-num"
+                  id="addmoney-pin"
                   placeholder="Your pin"
                   class="input input-bordered"
                   required
                 />
               </div>
               <div class="form-control mt-6">
-                <button id="login-btn" class="btn btn-primary">Login</button>
+                <button id="addmoney-btn" class="btn btn-primary">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- ------------------------------Cashout section -->
+          <div id="cash-out-section" class="hidden options">
+            <h1 class="text-xl font-semibold">Cash Out</h1>
+
+            <form class="card-body py-2 rounded-md bg-slate-900">
+              <div class="form-control py-0">
+                <label class="label">
+                  <span class="label-text">Enter Amount</span>
+                </label>
+                <input
+                  type="number"
+                  id="cashout-amount"
+                  placeholder="In Taka"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input
+                  type="number"
+                  id="cashout-pin"
+                  placeholder="Your pin"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cashout-btn" class="btn btn-primary">
+                  Cash Out
+                </button>
               </div>
             </form>
           </div>
@@ -195,6 +240,6 @@
       </main>
     </div>
 
-    <!-- <script src="./js/login.js"></script> -->
+    <script src="./js/home.js"></script>
   </body>
 </html>
